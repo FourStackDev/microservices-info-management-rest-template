@@ -76,8 +76,12 @@ public class InfoManagementServiceImpl implements InfoManagementService {
 
 	@PostConstruct
 	private void initialize() {
-		personInfoUrl = "http://localhost:8082/api/personal/";
-		professionalInfoUrl = "http://localhost:8084/api/professional/";
+		/*
+		 * URI's are constructed using the service discovery (personal-info -> name of
+		 * application given in the application.properties)
+		 */
+		personInfoUrl = "http://personal-info/api/personal/";
+		professionalInfoUrl = "http://professional-info/api/professional/";
 	}
 
 }
